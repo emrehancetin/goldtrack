@@ -1,25 +1,47 @@
 {
   "expo": {
-    "name": "metsan-packet-serial-number",
-    "slug": "metsan-packet-serial-number",
+    "name": "GoldTrack",
+    "slug": "goldtrack",
+    "scheme": "goldtrack",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0F0F0F",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.emrehancetin.goldtrack"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sharing",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "GoldTrack, altın külçe fotoğraflarını çekebilmek için kamera erişimine ihtiyaç duyar."
+        }
+      ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8a28c52e-31e5-4f81-8063-e8198e07680c"
+      }
     }
   }
 }
